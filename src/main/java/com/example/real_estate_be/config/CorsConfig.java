@@ -13,6 +13,8 @@ public class CorsConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.addAllowedOriginPattern("http://localhost:5173");
+        corsConfiguration.addAllowedOriginPattern("https://real-estate-fe-rho.vercel.app/");
+        corsConfiguration.addAllowedOriginPattern("https://real-estate-fe-rho.vercel.app");
         corsConfiguration.addAllowedMethod("*");
         corsConfiguration.addAllowedHeader("*");
         corsConfiguration.setAllowCredentials(true);
