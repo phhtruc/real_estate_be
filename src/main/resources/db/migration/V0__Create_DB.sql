@@ -1,5 +1,5 @@
 CREATE
-DATABASE IF NOT EXISTS real_estate;
+DATABASE IF NOT EXISTS railway;
 
 CREATE TABLE property_types
 (
