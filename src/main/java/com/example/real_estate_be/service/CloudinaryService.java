@@ -21,11 +21,19 @@ public class CloudinaryService {
 //        return  cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap());
 //
 //    }
+//    public String uploadImage(MultipartFile file) throws IOException {
+//        // Tải ảnh lên Cloudinary và lấy URL
+//        Map<String, Object> uploadResult = cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap());
+//        return (String) uploadResult.get("url"); // Lấy đường dẫn ảnh từ kết quả
+//    }
     public String uploadImage(MultipartFile file) throws IOException {
-        // Tải ảnh lên Cloudinary và lấy URL
-        Map<String, Object> uploadResult = cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap());
-        return (String) uploadResult.get("url"); // Lấy đường dẫn ảnh từ kết quả
+        Map uploadResult = cloudinary.uploader().upload(file.getBytes(), ObjectUtils.asMap(
+                "resource_type", "image",
+                "secure", true  // Bật HTTPS
+        ));
+        return (String) uploadResult.get("secure_url");  // Lấy đường dẫn HTTPS
     }
+
 
     public Map uploadFile(File file) throws IOException {
         return cloudinary.uploader().upload(file, ObjectUtils.emptyMap());
