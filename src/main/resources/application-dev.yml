@@ -5,9 +5,9 @@ spring:
     activate:
       on-profile: dev
   datasource:
-    url: jdbc:mysql://root:aVULaOjZXsLVrXCXqpwicHjmRKxhPkqS@tramway.proxy.rlwy.net:24824/railway
+    url: jdbc:mysql://root:TuLDJTsQqjagrAPdxwWbkqdUgMOEnSte@interchange.proxy.rlwy.net:37426/railway
     username: root
-    password: aVULaOjZXsLVrXCXqpwicHjmRKxhPkqS
+    password: TuLDJTsQqjagrAPdxwWbkqdUgMOEnSte
   jpa:
     hibernate:
       ddl-auto: validate
