@@ -47,3 +47,16 @@ src/
  │       ├── db/migration/    # Flyway migration scripts
  │       └── application.yml  # Application configuration
  └── test/                    # Unit & integration tests
+
+## ⚙ Installation & Setup
+### Prerequisites
+- Java 21
+- Maven 3.9+
+- MySQL
+- Redis
+
+### Steps
+1. Clone the repository
+```bash
+git clone https://github.com/phhtruc/pharmacy_be.git
+cd pharmacy_be
